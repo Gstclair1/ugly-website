@@ -1,0 +1,152 @@
+@keyframes bigger {
+    0% {width: 250px; height: 125px;}
+    50% {width: 700px; height: 350px;}
+    100% {width: 250px; height: 125px;}
+}
+
+@keyframes smaller {
+    from {width: 1000px; height: 500px;}
+    to {width: 300px; height: 100px;}
+}
+@keyframes vibrate {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(-1deg); }
+    20% { transform: rotate(1deg); }
+    30% { transform: rotate(0deg); }
+    40% { transform: rotate(1deg); }
+    50% { transform: rotate(-1deg); }
+    60% { transform: rotate(0deg); }
+    70% { transform: rotate(-1deg); }
+    80% { transform: rotate(1deg); }
+    90% { transform: rotate(0deg); }
+    100% { transform: rotate(-1deg); }
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+body {
+    background-color: greenyellow;
+    cursor:progress;
+    font-family: 'VT323', monospace;
+}
+#header {
+    display: grid;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "glasses-1 header glasses-2";
+
+}
+header {
+    grid-area: header;
+    text-align: center;
+    background-color: cyan;
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border: orchid;
+    border-width: 25px;
+    border-style:groove;
+    animation: vibrate 3.5s;
+    animation-iteration-count: infinite;
+}
+
+.amongus {
+    height: 100px;
+}
+
+.sunglasses-1 {
+    grid-area: sunglasses-1;
+}
+
+.sunglasses-2 {
+    grid-area: sunglasses-2;
+}
+
+.sunglasses-1, .sunglasses-2 {
+    height: 100px;
+    animation: shake 2s;
+    animation-iteration-count: infinite;
+
+}
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: hotpink;
+    padding: 15px;
+    width: 25px;
+    height: 500px;
+    position: absolute;
+    cursor:no-drop;
+}
+
+a {
+    color:greenyellow;
+    cursor:no-drop;
+    
+}
+
+#main-text {
+    color: salmon;
+    background-color: papayawhip;
+    border: rosybrown;
+    border-width: 10px;
+    border-style: groove;
+}
+
+#scam-message {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "title"
+    "text";
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    padding-top: 50 px;
+    border: tomato;
+    border-style:groove;
+    background-image: url('images/rainbow-background.jpg');
+    border-width: 15px;
+    width: 300px;
+    animation-name: bigger;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#scam-message h3{
+    text-align: center;
+    grid-area: title;
+}
+
+#scam-message p{
+    text-align: center;
+    grid-area: text;
+    color: orange;
+}
+
+#arnold-body {
+    background-image: url('images/money.jpg');
+    display: flex;
+    justify-content: center;
+    align-content:  center;
+    
+}
+
+#arnold {
+    padding-top: 500px;
+    animation: rotation 2s infinite linear;
+}
